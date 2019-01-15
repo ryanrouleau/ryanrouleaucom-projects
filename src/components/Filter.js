@@ -50,28 +50,40 @@ const Tag = styled.div`
   font-size: 12px;
   margin-left: 12px;
   margin-bottom: 12px;
+  transition: 0.15s ease;
   &:hover {
-    background: #fff;
     border: 1px solid #DADCE0;
   }
+  ${({ active }) => active && `
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.30), 0 1px 3px 1px rgba(60,64,67,0.15);
+    &:hover {
+      border: 1px solid transparent;
+    }
+  `}
 `;
 
 const activeTagStyle = {
   background: '#fff',
   boxShadow: '0 1px 2px 0 rgba(60,64,67,0.30), 0 1px 3px 1px rgba(60,64,67,0.15)',
+  border: '0 !important'
 };
 
-const genTagGroup = (title, tags) => (
-  <TagGroup key={ title }>
-    <TagTitle>{ title }</TagTitle>
-    { tags.map(tag => <Tag onClick={() => console.log(tag.name)} style={tag.active ? activeTagStyle : {}}>{ tag.name }</Tag>) }
-  </TagGroup>
-);
 
 const Filter = props => {
+  
+  const genTagGroup = (title, tags) => (
+    <TagGroup key={ title }>
+      <TagTitle>{ title }</TagTitle>
+      { tags.map(tag => <Tag key={tag} 
+        onClick={() => props.toggleTag(tag)} 
+        active={props.activeTags.has(tag)}
+      >{ tag }</Tag>) }
+    </TagGroup>
+  );
 
   const TagGroups = () => Object.keys(props.tags).map(groupName => 
-    genTagGroup(groupName, props.tags[groupName])
+    genTagGroup(groupName, props.tags[groupName], props.activeTags)
   );
 
   return (

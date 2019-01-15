@@ -1,30 +1,74 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Filter from './Filter';
+import ProjectCard from './ProjectCard';
 import FullWidthDiv from './FullWidthDiv';
 
-const tagsToObj = tags => {
-  const newTagObj = {};
-  Object.keys(tags).forEach(tagGroup => {
-    newTagObj[tagGroup] = [];
-    tags[tagGroup].forEach(tag => {
-      newTagObj[tagGroup].push({
-        name: tag,
-        active: false,
-      });
-    });
-  });
-  return newTagObj;
-};
+const FlexContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
+
+const Divider = styled.div`
+  width: 20%;
+  width: 100px;
+  height: 1px;
+  background: #DADCE0;
+  margin: 45px auto 60px auto;
+`;
 
 class Projects extends React.Component {
+
+  state = {
+    activeTags: new Set([]),
+  }
+
+  toggleTag = tag => {
+    const currentActiveTags = this.state.activeTags;
+    if (currentActiveTags.has(tag)) {
+      currentActiveTags.delete(tag)
+      this.setState({
+        activeTags: new Set(currentActiveTags)
+      });
+    }
+    else {
+      currentActiveTags.add(tag)
+      this.setState({
+        activeTags: new Set(currentActiveTags)
+      });
+    }
+  }
+
   render () {
 
-    const activeTags
+    const activeProjects = this.state.activeTags.size === 0 ?
+     this.props.projects : 
+     this.props.projects.filter(
+       project => [...this.state.activeTags].every(
+         tag => project.tags.includes(tag)
+       )
+     );
 
     return (
       <FullWidthDiv>
-        <Filter tags={this.props.tags} activeTags={} />
+        <Filter toggleTag={this.toggleTag} tags={this.props.tags} activeTags={this.state.activeTags} />
+
+        <Divider />
+
+        <FlexContainer>
+          {activeProjects.map(project => 
+            <ProjectCard 
+              title={project.name}
+              descriptions={project.description}
+              link={project.link}
+              key={project.name}
+            />
+          )}
+        </FlexContainer>
       </FullWidthDiv>
     );
   }
