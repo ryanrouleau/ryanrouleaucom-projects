@@ -1,31 +1,36 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Projects from './components/Projects';
 
-const Header = styled.div`
-  width: 100%;
-  height: 80px;
-  background: #fff;
-  box-shadow: 0 0 30px 0 rgba(0,0,0,.08), 0 3px 2px 0 rgba(0,0,0,.05);
-`;
+import Projects from './components/Projects';
+import {projectData, tags} from './data.js';
 
 const Title = styled.div`
   font-family: 'Raleway';
-  font-weight: 800;
+  font-weight: 900;
   font-size: 44px;
-  width: 60%;
+  width: 80%;
   margin: auto;
-  padding-top: 16px;
+  text-align: center;
+  padding-top: 42px;
 `;
 
+const Content = styled.div`
+  width: 70%;
+  margin: auto;
+  margin-top: 45px;
+`;
+console.log(projectData);
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header>
-          <Title>Projects</Title>
-        </Header>
-        <Projects data={{}} />
+
+        <Title>Ryan Rouleau, <span style={{fontFamily: 'Raleway', fontWeight: 800, fontSize: '38px'}}>Projects</span></Title>
+
+        <Content>
+          <Projects projects={projectData} tags={tags} />
+        </Content>
+
       </div>
     );
   }
