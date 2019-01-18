@@ -16,9 +16,9 @@ const Title = styled.div`
 `;
 
 const Content = styled.div`
-  width: 80%;
+  width: 92%;
   margin: auto;
-  margin-top: 45px;
+  margin-top: 50px;
 `;
 
 const Arrow = styled.img`

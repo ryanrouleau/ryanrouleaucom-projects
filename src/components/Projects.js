@@ -11,14 +11,14 @@ const FlexContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: flex-start;
 `;
 
 const Divider = styled.div`
-  width: 20%;
-  width: 100px;
+  width: 60px;
   height: 1px;
   background: #DADCE0;
-  margin: 45px auto 60px auto;
+  margin: 45px auto 25px auto;
 `;
 
 class Projects extends React.Component {
@@ -63,8 +63,12 @@ class Projects extends React.Component {
           {activeProjects.map(project => 
             <ProjectCard 
               title={project.name}
-              descriptions={project.description}
+              description={project.description}
               link={project.link}
+              date={project.date}
+              tags={project.tags}
+              toggleTag={this.toggleTag}
+              activeTags={this.state.activeTags}
               key={project.name}
             />
           )}

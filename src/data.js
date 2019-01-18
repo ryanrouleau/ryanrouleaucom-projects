@@ -1,11 +1,9 @@
 const projectData = [
   {
     name: 'Dwllr',
-    description: [
-      'A tool gathering huge amounts of data on every zip code in the US, and utilizing machine learning to aid in determining and recommending cities that fit you best',
-      'Responsible for defining Machine Learning model and designing & engineering the Vue.js frontend. Utilized Google Maps API, our custom API and (tons of) performant animations',
-    ],
+    description: 'A Full Stack app collecting a large amount of data on every zip code in the united states and allowing the user to find the closest matching cities to their preferences along with finding similar cities from a machine learning model.',
     link: 'https://github.com/ryanrouleau',
+    date: 'May 2018',
     tags: [
       'Full Stack',
       'Frontend',
@@ -27,6 +25,7 @@ const projectData = [
       'Designed and implemented a RESTful API to interact with server'
     ],
     link: 'https://github.com/ryanrouleau',
+    date: 'July 2017',
     tags: [
       'Backend',
       'Node.js',
@@ -42,6 +41,7 @@ const projectData = [
       'Designed and implemented a RESTful API to interact with server'
     ],
     link: 'https://github.com/ryanrouleau',
+    date: 'July 2017',
     tags: [
       'Backend',
       'Node.js',
@@ -57,6 +57,7 @@ const projectData = [
       'Designed and implemented a RESTful API to interact with server'
     ],
     link: 'https://github.com/ryanrouleau',
+    date: 'July 2017',
     tags: [
       'Backend',
       'Node.js',
