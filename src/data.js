@@ -25,7 +25,7 @@ const projectData = [
   },
   {
     name: 'Song Serve',
-    description: 'A Node.js App that creates a music library from local directories, gathers albumn art/other data from Spotify\'s API, creates relationships between Artists/Albums/Playlists, and serves the library over a REST API ',
+    description: 'A Node.js App that creates a music library from local directories, gathers album art and other data from Spotify\'s API, creates relationships between Artists/Albums/Playlists, and serves the library over a REST API.',
     link: 'https://github.com/ryanrouleau/song-serve',
     date: 'July 2017',
     tags: [
@@ -89,6 +89,7 @@ const projectData = [
       'Flask',
       'API Design',
       'SQL',
+      'UI Design',
     ],
   },
   {
@@ -109,7 +110,7 @@ const projectData = [
   },
   {
     name: 'Breast Cancer Identification',
-    description: 'Using several different ML algorithms to classify if a cell is cancerous or not.',
+    description: 'Exploring several different ML algorithms to classify if a cell is cancerous or not.',
     link: 'https://github.com/ryanrouleau/applied-machine-learning-final-project/blob/master/finalproject.ipynb',
     date: 'Nov. 2018',
     tags: [
@@ -140,12 +141,13 @@ const projectData = [
       'Backend',
       'JavaScript',
       'Node.js',
+      'UI Design',
     ],
   },
   {
     name: 'CU Smile',
     description: 'A hackathon project that connects with Pebble smart watch and records the location of certain button presses for consumption on a frontend.  Built with one other.',
-    link: 'https://github.com/JakeC1020/quote-verifier-chrome-extension',
+    link: 'https://github.com/JakeC1020/smile',
     date: 'Apr. 2016',
     tags: [
       'Full Stack',
@@ -167,22 +169,20 @@ const tags = {
     'UI Design',
     'API Design',
   ],
-  'Tools and Frameworks': [
-    'React', 
-    'Vue.js', 
-    'CSS Animation',
-    'd3.js',
-    'Node.js',
-    'Flask', 
-    'MySQL',
-    'Cassandra',
-  ],
   'Languages': [
     'JavaScript', 
     'Python', 
     'Java', 
     'SQL',
     'R'
+  ],
+  'Tools and Frameworks': [
+    'Vue.js', 
+    'CSS Animation',
+    'd3.js',
+    'Node.js',
+    'Flask', 
+    'Cassandra',
   ],
 };
 

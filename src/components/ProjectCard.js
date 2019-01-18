@@ -35,12 +35,6 @@ const Date = styled.span`
   background: #fff;
 `;
 
-const TitleDivider = styled.span`
-  height: 1px;
-  width: 100%;
-  background: #DADCE0;
-`;
-
 const Description = styled.p`
   margin-top: 12px;
   font-size: 14x;
@@ -101,7 +95,7 @@ const OuterContainer = styled.a`
   position: relative;
   z-index: 1;
   width: 400px;
-  margin: 0px 16px 22px 16px;
+  margin: 0px 16px 8px 16px;
   padding-top: 26px;
   text-decoration: none;
 
