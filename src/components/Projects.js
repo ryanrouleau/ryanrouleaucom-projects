@@ -10,15 +10,15 @@ const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Divider = styled.div`
-  width: 60px;
+  width: 40px;
   height: 1px;
   background: #DADCE0;
-  margin: 45px auto 25px auto;
+  margin: 35px auto 15px auto;
 `;
 
 class Projects extends React.Component {

@@ -7,7 +7,7 @@ import ArrowImg from '../img/arrow.png';
 const CardContainer = styled.div`
   width: 400px;
   border: 1px solid #DADCE0;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 12px;
   transition: 0.4s;
   padding: 16px 24px 10px 24px;
@@ -62,7 +62,7 @@ const Divider = styled.div`
   width: 10%;
   height: 1px;
   background: #DADCE0;
-  margin: 8px 0 12px 0;
+  margin: 8px 0 14px 0;
 `;
 
 const Arrow = styled.img`
@@ -87,6 +87,10 @@ const Link = styled.a`
   margin-left: 18px;
   text-decoration: none;
   color: rgba(0,0,0,0.6);
+  width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   &:hover {
     color: rgba(0,0,0,0.85);
   }
@@ -97,7 +101,7 @@ const OuterContainer = styled.a`
   position: relative;
   z-index: 1;
   width: 400px;
-  margin: 0px 8px 22px 8px;
+  margin: 0px 16px 22px 16px;
   padding-top: 26px;
   text-decoration: none;
 
@@ -107,7 +111,7 @@ const OuterContainer = styled.a`
     }
     ${Arrow} {
       transform: translate(32px, -32px) rotate(-45deg);
-      opacity: 0.4;
+      opacity: 0.5;
     }
     ${Link} {
       transform: translate(0px, -26px);
