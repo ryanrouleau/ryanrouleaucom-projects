@@ -118,8 +118,10 @@ const ProjectCard = props => {
 
   return (
     <OuterContainer href={props.link} target="_blank">
+
       <Link>{props.link}</Link>
       <Arrow src={ArrowImg} />
+
       <CardContainer>
         <CardTitle>{props.title}, </CardTitle>
         <Date>{props.date}</Date>
@@ -135,6 +137,7 @@ const ProjectCard = props => {
           >{tag}</SmallerTag>
         )}
       </CardContainer>
+
     </OuterContainer>
   );
 };

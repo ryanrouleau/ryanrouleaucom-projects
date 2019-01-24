@@ -46,15 +46,16 @@ class Projects extends React.Component {
   render () {
 
     const activeProjects = this.state.activeTags.size === 0 ?
-     this.props.projects : 
-     this.props.projects.filter(
-       project => [...this.state.activeTags].every(
-         tag => project.tags.includes(tag)
-       )
-     );
+      this.props.projects : 
+      this.props.projects.filter(
+        project => [...this.state.activeTags].every(
+          tag => project.tags.includes(tag)
+        )
+      );
 
     return (
       <FullWidthDiv>
+
         <Filter toggleTag={this.toggleTag} tags={this.props.tags} activeTags={this.state.activeTags} />
 
         <Divider />
@@ -73,6 +74,7 @@ class Projects extends React.Component {
             />
           )}
         </FlexContainer>
+
       </FullWidthDiv>
     );
   }
