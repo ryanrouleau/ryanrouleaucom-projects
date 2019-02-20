@@ -102,13 +102,14 @@ const OuterContainer = styled.a`
   &:hover {
     ${CardContainer} {
       box-shadow: 0 1px 2px 0 rgba(60,64,67,0.30), 0 1px 3px 1px rgba(60,64,67,0.15);
+      transform: translateY(-4px);
     }
     ${Arrow} {
       transform: translate(32px, -32px) rotate(-45deg);
       opacity: 0.5;
     }
     ${Link} {
-      transform: translate(0px, -26px);
+      transform: translate(0px, -30px);
       opacity: 1;
     }
   }
